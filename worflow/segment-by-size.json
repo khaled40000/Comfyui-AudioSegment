@@ -1,0 +1,282 @@
+{
+  "id": "a5262b67-071d-4eef-a971-908b2d7a39bb",
+  "revision": 0,
+  "last_node_id": 7,
+  "last_link_id": 5,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "AudioSegmenter",
+      "pos": [
+        858.7389526367188,
+        1771.118896484375
+      ],
+      "size": [
+        270,
+        102
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio_list",
+          "type": "*",
+          "links": [
+            1,
+            4
+          ]
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "comfyui-audio-segment.git",
+        "ver": "1d057e0256d1944aeaee7ade22e0985c23b8c61a",
+        "Node name for S&R": "AudioSegmenter"
+      },
+      "widgets_values": [
+        10,
+        -40
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadAudio",
+      "pos": [
+        443.88360595703125,
+        1770.42236328125
+      ],
+      "size": [
+        274.080078125,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.47",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "caocao.wav",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 2,
+      "type": "SelectAudioFromList",
+      "pos": [
+        1228.0169677734375,
+        1766.9437255859375
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_list",
+          "type": "*",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "comfyui-audio-segment.git",
+        "ver": "1d057e0256d1944aeaee7ade22e0985c23b8c61a",
+        "Node name for S&R": "SelectAudioFromList"
+      },
+      "widgets_values": [
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "type": "PreviewAudio",
+      "pos": [
+        1593.3748779296875,
+        1754.6981201171875
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.47",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "PreviewAudio",
+      "pos": [
+        1525.6663818359375,
+        1973.729736328125
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 5
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.47",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 5,
+      "type": "AudioListToBatch",
+      "pos": [
+        1297.2198486328125,
+        1975.337646484375
+      ],
+      "size": [
+        156.63729858398438,
+        26
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_list",
+          "type": "*",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "comfyui-audio-segment.git",
+        "ver": "1d057e0256d1944aeaee7ade22e0985c23b8c61a",
+        "Node name for S&R": "AudioListToBatch"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "*"
+    ],
+    [
+      2,
+      3,
+      0,
+      1,
+      0,
+      "AUDIO"
+    ],
+    [
+      3,
+      2,
+      0,
+      4,
+      0,
+      "AUDIO"
+    ],
+    [
+      4,
+      1,
+      0,
+      5,
+      0,
+      "*"
+    ],
+    [
+      5,
+      5,
+      0,
+      7,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9646149645000012,
+      "offset": [
+        -294.84826355266193,
+        -1486.0432061630322
+      ]
+    },
+    "frontendVersion": "1.23.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

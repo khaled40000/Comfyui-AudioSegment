@@ -1,0 +1,353 @@
+{
+  "id": "10bf74b7-b9c9-4509-aec6-d1c02de9a355",
+  "revision": 0,
+  "last_node_id": 8,
+  "last_link_id": 9,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "easy showAnything",
+      "pos": [
+        1989.7562255859375,
+        1808.1680908203125
+      ],
+      "size": [
+        414.3363037109375,
+        101.86848449707031
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.3",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "更可笑那美颜之术，将孤的面容修得油头粉面——孤征讨四方时留下的刀疤箭痕，竟被抹得干干净净！"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "SelectAudioClipFromList",
+      "pos": [
+        1507.7392578125,
+        1673.30615234375
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_clip_list",
+          "type": "*",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "comfyui-audio-segment.git",
+        "ver": "1d057e0256d1944aeaee7ade22e0985c23b8c61a",
+        "Node name for S&R": "SelectAudioClipFromList"
+      },
+      "widgets_values": [
+        2
+      ]
+    },
+    {
+      "id": 6,
+      "type": "easy showAnything",
+      "pos": [
+        1493.3629150390625,
+        2025.562255859375
+      ],
+      "size": [
+        382.41375732421875,
+        255.36236572265625
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.3",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "1\n00:00:00,000 --> 00:00:12,760\n这些后世之人，倒真会玩弄技巧。未经孤准许，尼玛的。便将孤的容貌声腔拆解拼凑，制成那所谓「克隆」之物。\n\n2\n00:00:12,760 --> 00:00:20,380\n孤当年横槊赋诗之姿，岂是尔等用代码算法所能复刻的？\n\n3\n00:00:20,380 --> 00:00:32,600\n更可笑那美颜之术，将孤的面容修得油头粉面——孤征讨四方时留下的刀疤箭痕，竟被抹得干干净净！\n\n4\n00:00:33,200 --> 00:00:39,460\n若在当年，敢如此篡改孤真容者，早该拖去斩了。\n\n5\n00:00:40,120 --> 00:00:44,900\n最可恼的是那伪声，学得三分像便四处哗众取宠。\n\n6\n00:00:46,260 --> 00:00:59,820\n孤在建安十五年冬夜吟《短歌行》时喉间的沙哑，铜雀台宴饮时醉后的豪迈，岂是尔等机械所能摹其万一？\n\n7\n00:01:01,000 --> 00:01:15,700\n速将那些虚影幻声尽数撤去。若要识真曹操,自去读史书墨痕里那个真实的孤，纵使霸道多疑，也比你们矫造出来的傀儡真切万分！\n"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadAudio",
+      "pos": [
+        497.37396240234375,
+        1758.5936279296875
+      ],
+      "size": [
+        274.080078125,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.47",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "caocao.wav",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 4,
+      "type": "PreviewAudio",
+      "pos": [
+        1980.1094970703125,
+        1617.755126953125
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 8
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.47",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 5,
+      "type": "easy showAnything",
+      "pos": [
+        1998.0208740234375,
+        1979.13623046875
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.3",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "7"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "AudioSegmentByParagraph",
+      "pos": [
+        933.0967407226562,
+        1760.464599609375
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AudioClip list",
+          "type": "*",
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "size",
+          "type": "INT",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "srt",
+          "type": "STRING",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "comfyui-audio-segment.git",
+        "ver": "1d057e0256d1944aeaee7ade22e0985c23b8c61a",
+        "Node name for S&R": "AudioSegmentByParagraph"
+      },
+      "widgets_values": [
+        "这些后世之人，倒真会玩弄技巧。未经孤准许，尼玛的。便将孤的容貌声腔拆解拼凑，制成那所谓「克隆」之物。\n孤当年横槊赋诗之姿，岂是尔等用代码算法所能复刻的？\n更可笑那美颜之术，将孤的面容修得油头粉面——孤征讨四方时留下的刀疤箭痕，竟被抹得干干净净！\n若在当年，敢如此篡改孤真容者，早该拖去斩了。\n最可恼的是那伪声，学得三分像便四处哗众取宠。\n孤在建安十五年冬夜吟《短歌行》时喉间的沙哑，铜雀台宴饮时醉后的豪迈，岂是尔等机械所能摹其万一？\n速将那些虚影幻声尽数撤去。若要识真曹操,自去读史书墨痕里那个真实的孤，纵使霸道多疑，也比你们矫造出来的傀儡真切万分！",
+        "base"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "AUDIO"
+    ],
+    [
+      4,
+      1,
+      1,
+      5,
+      0,
+      "*"
+    ],
+    [
+      5,
+      1,
+      2,
+      6,
+      0,
+      "*"
+    ],
+    [
+      7,
+      1,
+      0,
+      7,
+      0,
+      "*"
+    ],
+    [
+      8,
+      7,
+      0,
+      4,
+      0,
+      "AUDIO"
+    ],
+    [
+      9,
+      7,
+      1,
+      8,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9646149645000012,
+      "offset": [
+        -362.82389622801514,
+        -1522.8778513920947
+      ]
+    },
+    "frontendVersion": "1.23.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
