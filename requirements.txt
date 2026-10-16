@@ -1,0 +1,7 @@
+numpy
+pydub
+torch
+openai-whisper
+transformers
+accelerate
+opencc-python-reimplemented
